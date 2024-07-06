@@ -11,7 +11,7 @@
 - **Heurística Manhattan**: Método utilizado para estimar la distancia entre dos puntos en una cuadrícula, sumando las diferencias absolutas de sus coordenadas.
 
 ### Funciones y Métodos
-- **obtener_entrada()**: Función para recibir y validar la entrada del usuario, asegurando que los valores sean mayores que 5.
+- **obtener_entrada()**: Función para recibir y validar la entrada del usuario, asegurando que los valores sean mayores que 10.
 - **obtener_posicion()**: Función para recibir y validar las coordenadas (fila y columna) ingresadas por el usuario.
 - **obtener_obstaculos()**: Función para recibir las posiciones de los obstáculos y asegurar que no se coloquen en lugares ocupados por edificios, el inicio o el objetivo.
 - **Nodo**: Clase que representa un nodo en el camino, con atributos para su posición, nodo padre, y costos de movimiento (g, h, f).
