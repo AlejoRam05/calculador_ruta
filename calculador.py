@@ -7,14 +7,14 @@ def obtener_entrada(mensaje):
     while True:
         try:
             valor = int(input(mensaje))
-            if valor <= 5:
-                raise ValueError("El valor debe ser superior a 5.")
+            if valor <= 10:
+                raise ValueError("El valor debe ser superior a 10.")
             return valor
         except ValueError as e:
             print(e)
 
-FILAS = obtener_entrada("Ingrese un número de filas (superior a 5): ")
-COLUMNAS = obtener_entrada("Ingrese un número de columnas (superior a 5): ")
+FILAS = obtener_entrada("Ingrese un número de filas (superior a 10): ")
+COLUMNAS = obtener_entrada("Ingrese un número de columnas (superior a 10): ")
 
 EDIFICIO = 1
 
