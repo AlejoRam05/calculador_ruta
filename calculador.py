@@ -24,8 +24,9 @@ def obtener_posicion(mensaje, FILAS, COLUMNAS, exclusion=None):
             fila = int(input(f"Ingrese la fila para {mensaje} (0 a {FILAS-1}): "))
             columna = int(input(f"Ingrese la columna para {mensaje} (0 a {COLUMNAS-1}): "))
             if 0 <= fila < FILAS and 0 <= columna < COLUMNAS:
+                #Saber mas sobre exclusion/none
                 if exclusion and (fila, columna) == exclusion:
-                    raise ValueError("La posición no puede coincidir con la de exclusión.")
+                    raise ValueError("La posición no puede coincidir con la del inicio.")
                 return (fila, columna)
             else:
                 raise ValueError("La posición debe estar dentro de los límites de la matriz.")
@@ -90,7 +91,7 @@ def a_estrella(inicio, fin, FILAS, COLUMNAS, matriz):
     lista_abierta.append(nodo_inicio)
 
     while lista_abierta:
-        nodo_actual = min(lista_abierta, key=lambda nodo: nodo.f)
+        nodo_actual = min(lista_abierta, key=lambda nodo: nodo.f) # Retorna la mejor suma de todos los nodos con el Key lambda
         lista_abierta.remove(nodo_actual)
         lista_cerrada.append(nodo_actual)
 
@@ -100,7 +101,7 @@ def a_estrella(inicio, fin, FILAS, COLUMNAS, matriz):
             while actual:
                 camino.append(actual.posicion)
                 actual = actual.parent
-            return camino[::-1]
+            return camino[::-1] # Invierte la lista 
 
         hijos = []
         for movimiento in movimientos:
